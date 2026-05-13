@@ -103,10 +103,18 @@ export default function App() {
                   </div>
                 </div>
 
-                {/* Expanded note */}
+                {/* Expanded note + review */}
                 {isOpen && (
-                  <div style={{ padding: '14px 20px 20px', fontSize: '14px', lineHeight: '1.8', color: 'rgba(232,220,200,0.65)', borderTop: '1px solid rgba(232,220,200,0.07)' }}>
-                    {item.note}
+                  <div style={{ borderTop: '1px solid rgba(232,220,200,0.07)' }}>
+                    <div style={{ padding: '14px 20px', fontSize: '14px', lineHeight: '1.8', color: 'rgba(232,220,200,0.65)' }}>
+                      {item.note}
+                    </div>
+                    {item.review && (
+                      <div style={{ margin: '0 20px 20px', padding: '14px 16px', background: 'rgba(192,146,42,0.06)', borderLeft: '2px solid rgba(192,146,42,0.4)', borderRadius: '1px' }}>
+                        <div style={{ fontSize: '9px', letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(192,146,42,0.6)', marginBottom: '8px' }}>My Review</div>
+                        <div style={{ fontSize: '14px', lineHeight: '1.8', color: 'rgba(232,220,200,0.75)', fontStyle: 'italic' }}>{item.review}</div>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
