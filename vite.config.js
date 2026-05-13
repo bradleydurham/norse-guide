@@ -6,5 +6,5 @@ import react from '@vitejs/plugin-react'
 // For a user/org site (github.com/you/you.github.io), set base: '/'
 export default defineConfig({
   plugins: [react()],
-  base: '/norse-guide/',
+  base: '/',
 })
